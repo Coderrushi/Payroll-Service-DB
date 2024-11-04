@@ -17,4 +17,5 @@ Insert Into employee_payroll Values
 ('Kalpesh', 45000, '2023-03-10'),
 ('Rushi', 50000, '2023-04-05');
 
+Select * from employee_payroll;
 
