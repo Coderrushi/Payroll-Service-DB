@@ -19,3 +19,13 @@ Insert Into employee_payroll Values
 
 Select * from employee_payroll;
 
+Select empSalary
+From employee_payroll
+Where empName = 'Kalpesh';
+
+Select empId, empName, startDate
+From employee_payroll
+Where startDate BETWEEN CAST('2023-02-10'as date) AND GETDATE();
+
+
+
