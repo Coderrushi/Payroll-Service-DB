@@ -10,3 +10,11 @@ Create Table employee_payroll (
 	empSalary decimal(10,2) not null,
 	startDate date not null
 );
+
+Insert Into employee_payroll Values 
+('Raj', 40000, '2023-01-15'),
+('Ayush', 35000, '2023-02-20'),
+('Kalpesh', 45000, '2023-03-10'),
+('Rushi', 50000, '2023-04-05');
+
+
