@@ -27,5 +27,10 @@ Select empId, empName, startDate
 From employee_payroll
 Where startDate BETWEEN CAST('2023-02-10'as date) AND GETDATE();
 
+Alter Table employee_payroll
+Add empGender varchar(8);
 
+Update employee_payroll 
+Set empGender = 'M'
+Where empName = 'Raj' OR empName = 'Ayush' OR empName = 'Kalpesh' OR empName = 'Rushi';
 
