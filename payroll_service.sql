@@ -34,3 +34,27 @@ Update employee_payroll
 Set empGender = 'M'
 Where empName = 'Raj' OR empName = 'Ayush' OR empName = 'Kalpesh' OR empName = 'Rushi';
 
+Insert Into employee_payroll Values
+('Jasmine', 40000, '2023-09-25', 'F'),
+('katherine', 35000, '2024-02-12', 'F');
+
+Select empGender, COUNT(*) as empCount 
+From employee_payroll
+Group by empGender;
+
+Select SUM(empSalary) AS total_sum
+From employee_payroll
+where empGender = 'F'
+Group by empGender;
+
+Select empName, empSalary
+From employee_payroll
+Where empGender = 'M' AND empSalary = (Select MIN(empSalary) From employee_payroll Where empGender = 'M');
+
+
+Select empName, empSalary
+From employee_payroll
+Where empGender = 'F' AND empSalary = (Select MAX(empSalary) From employee_payroll Where empGender = 'F');
+
+Select AVG(empSalary)
+From employee_payroll;
